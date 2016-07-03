@@ -1,0 +1,97 @@
+International Allegro CL Enterprise Edition
+9.0 [64-bit Windows *SMP*] (Jun 19, 2016 16:31)
+Copyright (C) 1985-2012, Franz Inc., Oakland, CA, USA.  All Rights Reserved.
+
+This development copy of Allegro CL is licensed to:
+   [TC20564] Seiji Koide -- for his personal use
+
+;; Optimization settings: safety 1, space 1, speed 1, debug 2.
+;; For a complete description of all compiler switches given the
+;; current optimization settings evaluate (explain-compiler-settings).
+;;---
+;; Current reader case mode: :case-sensitive-lower
+cl-user(1): :cd /allegro-projects/mop
+C:\allegro-projects\mop\
+cl-user(2): :ld mop0
+; Fast loading C:\allegro-projects\mop\mop0.fasl
+cl-user(3): :ld basic0
+; Fast loading C:\allegro-projects\mop\basic0.fasl
+cl-user(4): (compile-file "dmap0.lisp")
+;;; Compiling file dmap0.lisp
+; While file-compiling #'dmap-demo in #P"dmap0.lisp"
+; starting at file character position 6488:
+Warning: Free reference to undeclared variable *sent1* assumed special.
+; While file-compiling #'dmap-demo in #P"dmap0.lisp"
+; starting at file character position 6488:
+Warning: Free reference to undeclared variable *sent2* assumed special.
+;;; Writing fasl file dmap0.fasl
+;;; Fasl write complete
+#P"C:\\allegro-projects\\mop\\dmap0.fasl"
+t
+t
+cl-user(5): :ld dmap0
+; Fast loading C:\allegro-projects\mop\dmap0.fasl
+cl-user(6): (dmap-demo)
+----------------
+Parsing (Milton Friedman says interest rates will rise because of the
+         monetary explosion period)
+
+Reading Milton
+
+Reading Friedman
+Activating I-m-Friedman
+
+Reading says
+
+Reading interest
+
+Reading rates
+Activating I-m-interest-rates
+
+Reading will
+
+Reading rise
+Activating I-m-increase
+Activating I-m-vtrans.8
+Activating I-m-mobject/state-change.9
+
+Reading because
+
+Reading of
+
+Reading the
+
+Reading monetary
+
+Reading explosion
+Activating I-m-ms-up
+Activating I-m-causal.10
+Activating I-m-arg.11
+Activating I-m-mobject/state-change.12
+
+Reading period
+----------------
+Parsing (Arthur Laffer says interest rates will drop period)
+
+Reading Arthur
+
+Reading Laffer
+Activating I-m-Laffer
+
+Reading says
+
+Reading interest
+
+Reading rates
+Activating I-m-interest-rates
+
+Reading will
+
+Reading drop
+Activating I-m-decrease
+Activating I-m-vtrans.13
+Activating I-m-mobject/state-change.14
+
+Reading period
+nil
+cl-user(7): 
