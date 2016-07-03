@@ -81,7 +81,7 @@
       (cond ((null (cdr phrase))
              (pred->mop new-pred))
             (t (let ((next-pos (+ *sent-pos* 1)))
-                 ;(format t "~&Adding ~S to ~S" new-pred (pos-preds next-pos))
+                 (format t "~&Adding ~S to ~S" new-pred (pos-preds next-pos))
                  (setf (pos-preds next-pos)
                    (cons new-pred
                          (pos-preds next-pos)))))))))
@@ -224,16 +224,19 @@
 
 (defphrase m-mtrans (actor) says (info) period)
 
+(defvar *sent1*)
+(defvar *sent2*)
+
 (defun dmap-demo ()
   (format t "~&----------------")
   (dmap-init)
-  (defparameter *sent1*
+  (setq *sent1*
     '(Milton Friedman says interest rates will rise because of the monetary explosion period))
   (format t "~&Parsing ~S" *sent1*)
   (dmap *sent1*)
   (format t "~&----------------")
   (dmap-init)
-  (defparameter *sent2*
+  (setq *sent2*
     '(Arthur Laffer says interest rates will drop period))
   (format t "~&Parsing ~S" *sent2*)
   (dmap *sent2*)
